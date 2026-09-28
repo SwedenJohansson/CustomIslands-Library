@@ -51,7 +51,6 @@ game can tell when an entry it downloaded has a newer version.
   "icon": "icon.jpg",
   "pictures": ["picture1.jpg", "picture2.jpg"],
   "plan": "First Voyage.plan",
-  "settings": { "monsters": "normal", "buildCost": 0, "levels": false },
   "remix": true,
   "featured": true,
   "minModVersion": "3.0",
@@ -66,9 +65,12 @@ game can tell when an entry it downloaded has a newer version.
 | `version` | a whole number; raise it when the entry changes, so players are offered the update |
 | `description`, `tags`, `players`, `length`, `pictures` | optional, shown in the game |
 | `plan` | plans only: the plan file in the folder |
-| `settings` | plans only: suggested New Game settings (the player can change them) |
 | `remix` | whether others may change and re-share it (credit stays with the author) |
 | `featured` | shown first, with a badge |
+
+An entry has no game settings: difficulty, build cost, the level up system and the rest are chosen by the player in
+Raft's New Game box (World settings), whatever plan they pick. Mention in the description what you had in mind, e.g.
+"best with Fierce monsters".
 | `minModVersion` | the oldest Custom Islands version it works with |
 
 `index.json` has all of that for every entry, plus what the build adds: `id`, `path`, `islands` (how many), `size`,

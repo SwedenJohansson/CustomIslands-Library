@@ -26,11 +26,6 @@
                                          "picture2.jpg"
                                      ],
                         "plan":  "First Voyage.plan",
-                        "settings":  {
-                                         "monsters":  "normal",
-                                         "buildCost":  0,
-                                         "levels":  false
-                                     },
                         "remix":  true,
                         "featured":  true,
                         "minModVersion":  "3.0",
