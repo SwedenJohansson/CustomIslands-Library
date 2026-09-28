@@ -1,9 +1,178 @@
 {
   "format": 1,
   "library": "Custom Islands library",
-  "download": "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/dc884b2aa1142e79334eb9d30be935004058dcfb/",
-  "commit": "dc884b2aa1142e79334eb9d30be935004058dcfb",
+  "download": "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/3c10a0347eb31806be5af63a2e0853635201e89b/",
+  "commit": "3c10a0347eb31806be5af63a2e0853635201e89b",
   "entries": [
+    {
+      "id": "drowned-shrine",
+      "path": "islands/drowned-shrine",
+      "kind": "island",
+      "title": "Drowned Shrine",
+      "author": "SwedenJohansson",
+      "version": 1,
+      "summary": "An island under the sea: corals, sunken barrels and a hoard for divers.",
+      "description": "The sea took this island long ago. Dive down among the corals and the sunken barrels - there is loot for those who can hold their breath.\nTick 'Also turn up while sailing' when you download it to meet it by chance in your worlds.",
+      "tags": [
+        "underwater",
+        "diving",
+        "loot"
+      ],
+      "players": "1-8",
+      "length": "15-30 minutes",
+      "icon": "icon.jpg",
+      "pictures": [
+        "picture1.jpg"
+      ],
+      "remix": true,
+      "featured": true,
+      "minModVersion": "3.0",
+      "created": "2026-09-28",
+      "islands": 1,
+      "size": 203032,
+      "updated": "2026-09-28",
+      "files": [
+        {
+          "name": "Drowned Shrine.island",
+          "size": 76733,
+          "sha256": "9c15729aff03e7071b616669f33fea879b295b7b3d1e7faf0dcd3eb2e51a5c9f"
+        },
+        {
+          "name": "icon.jpg",
+          "size": 5361,
+          "sha256": "e6e7e0a1d3f6acb1b7c684b71da151ed3428a60369c16da6c8ae0e14b327ebe4"
+        },
+        {
+          "name": "picture1.jpg",
+          "size": 120938,
+          "sha256": "05fe63f25c4d94c5aaaeb0d46b379a477a980294b95033605704ae66108bcae0"
+        }
+      ]
+    },
+    {
+      "id": "emerald-jungle",
+      "path": "islands/emerald-jungle",
+      "kind": "island",
+      "title": "Emerald Jungle",
+      "author": "SwedenJohansson",
+      "version": 1,
+      "summary": "A large island made like Raft's big ones: dense jungle, cliffs and plenty to gather.",
+      "description": "Big enough to get lost in: thick trees and plants, rocks and ores, and animals in the shade. A good place to stock up.\nTick 'Also turn up while sailing' when you download it to meet it by chance in your worlds.",
+      "tags": [
+        "large",
+        "jungle",
+        "resources"
+      ],
+      "players": "1-8",
+      "length": "30-60 minutes",
+      "icon": "icon.jpg",
+      "pictures": [
+        "picture1.jpg"
+      ],
+      "remix": true,
+      "featured": true,
+      "minModVersion": "3.0",
+      "created": "2026-09-28",
+      "islands": 1,
+      "size": 329633,
+      "updated": "2026-09-28",
+      "files": [
+        {
+          "name": "Emerald Jungle.island",
+          "size": 203196,
+          "sha256": "4b8f66b5481fd609e4c2c3d5b7f87b072cda6042f9f4054fd74c5e57dff5f375"
+        },
+        {
+          "name": "icon.jpg",
+          "size": 14894,
+          "sha256": "da73757836cf6f4e6c0e01be1b22c8d3cbca20360775e3634b5ba221e1de1a86"
+        },
+        {
+          "name": "picture1.jpg",
+          "size": 111543,
+          "sha256": "5f756649466e7dd3f34d76380be870f21767a6ee34c8c364826e421394167830"
+        }
+      ]
+    },
+    {
+      "id": "far-horizons",
+      "path": "plans/far-horizons",
+      "kind": "plan",
+      "title": "Far Horizons",
+      "author": "SwedenJohansson",
+      "version": 1,
+      "summary": "Few islands, far apart: a volcano, a frozen peak, a rat marsh and a last haven, each kilometres from the next.",
+      "description": "Random islands are off: after 2 km a volcano glows on the horizon, after 6 km a frozen spire rises, after 10 km a misty marsh full of rats, and after 15 km a quiet atoll - the last haven. Between them there is only the sea, so plan your supplies.\nBest with Fierce monsters and a higher build cost (World settings).",
+      "tags": [
+        "survival",
+        "long",
+        "sparse",
+        "multiplayer"
+      ],
+      "players": "1-8",
+      "length": "several hours",
+      "icon": "icon.jpg",
+      "pictures": [
+        "picture1.jpg",
+        "picture2.jpg",
+        "picture3.jpg"
+      ],
+      "plan": "Far Horizons.plan",
+      "remix": true,
+      "featured": true,
+      "minModVersion": "3.0",
+      "created": "2026-09-28",
+      "islands": 4,
+      "size": 1094524,
+      "updated": "2026-09-28",
+      "files": [
+        {
+          "name": "Ember Isle.island",
+          "size": 133190,
+          "sha256": "fe9d6b147877f66934f6f57fb51068e3dd7e212da29ebb29a906e34d7aee4a23"
+        },
+        {
+          "name": "Far Horizons.plan",
+          "size": 2285,
+          "sha256": "7e442a20d5aa6b5e21e2938ddeb3f89ba178b277e0e1a209635271616075f8cf"
+        },
+        {
+          "name": "Frostpeak.island",
+          "size": 119978,
+          "sha256": "eb69c87b4592d41bef3e1990738dea4eaec7cdd861d4a4f819018ba4beba5cc2"
+        },
+        {
+          "name": "icon.jpg",
+          "size": 17864,
+          "sha256": "8ee70fcdac76f25e895fc5eebd4d1273e2ded9b8978b3e7b9f41bbeebcd6d6a5"
+        },
+        {
+          "name": "Last Haven.island",
+          "size": 314794,
+          "sha256": "c66584c370bb16263900b807a5984411961fc8b78cb0ad3cf61f88e731b0e5c0"
+        },
+        {
+          "name": "picture1.jpg",
+          "size": 66877,
+          "sha256": "04475f1823dd991b8df134eb94b8e6e13c3a345e68f6e3ad583c8f3e0d48d9f7"
+        },
+        {
+          "name": "picture2.jpg",
+          "size": 141677,
+          "sha256": "426e8a6c18a1f2915cdf9287f2d2f1a2ecd278479284ac0b264454e2d517f50d"
+        },
+        {
+          "name": "picture3.jpg",
+          "size": 117862,
+          "sha256": "549fe7b3de49f0fec94fd6784940fbabef2f3d232e4ab9b6315aa3846d03a6ba"
+        },
+        {
+          "name": "Rat Marsh.island",
+          "size": 179997,
+          "sha256": "064f37db8a72d61fd5c1ef8d01220ffde0a9000aa6fcfdf0a90ee6e0f6c6212b"
+        }
+      ]
+    },
     {
       "id": "first-voyage",
       "path": "plans/first-voyage",
@@ -109,6 +278,125 @@
           "name": "picture1.jpg",
           "size": 249148,
           "sha256": "2cef99dd178b540ec25d4023a94131bc00a5b2d2521e9159d26d802b11663efe"
+        }
+      ]
+    },
+    {
+      "id": "skyreach",
+      "path": "islands/skyreach",
+      "kind": "island",
+      "title": "Skyreach",
+      "author": "SwedenJohansson",
+      "version": 1,
+      "summary": "A small island floating high above the sea, with a cache for whoever climbs up to it.",
+      "description": "A sky island hangs far above the waves. Build up from your raft to reach it - the cache on top is worth the climb.\nTick 'Also turn up while sailing' when you download it to meet it by chance in your worlds.",
+      "tags": [
+        "flying",
+        "small",
+        "challenge"
+      ],
+      "players": "1-8",
+      "length": "15 minutes",
+      "icon": "icon.jpg",
+      "pictures": [
+        "picture1.jpg"
+      ],
+      "remix": true,
+      "featured": true,
+      "minModVersion": "3.0",
+      "created": "2026-09-28",
+      "islands": 1,
+      "size": 200306,
+      "updated": "2026-09-28",
+      "files": [
+        {
+          "name": "icon.jpg",
+          "size": 12948,
+          "sha256": "587717a37210ee107afaac7c74fecbb2ac8eb6e11ace719677bfea11f7f3d651"
+        },
+        {
+          "name": "picture1.jpg",
+          "size": 83518,
+          "sha256": "e6a7075647bfa8decdee7feb2fb042526e71b24f3af83040a1e70b2174904769"
+        },
+        {
+          "name": "Skyreach.island",
+          "size": 103840,
+          "sha256": "817b6372353aff8f5d62ff5512d3c30b68f5abd2335eecca06cfd4fab3307d3f"
+        }
+      ]
+    },
+    {
+      "id": "castaways-trail",
+      "path": "plans/castaways-trail",
+      "kind": "plan",
+      "title": "The Castaway's Trail",
+      "author": "SwedenJohansson",
+      "version": 1,
+      "summary": "A short adventure: an empty camp, the smuggler's treasure its notes point to, and the rock a warden guards.",
+      "description": "Castaway Camp appears ahead as the world starts. Read the notice board and search the supplies: the castaway's notes point to Smuggler's Cove to the north, where a map in a bottle leads to buried treasure. Reach the cove and a flat rock rises to the east - Warden's Rock, and something big guards its top. A wreck drifts by on the way.\nThree islands, two quests and a fight. Random islands are off, so these are the only custom islands in the world.",
+      "tags": [
+        "adventure",
+        "quest",
+        "short",
+        "multiplayer"
+      ],
+      "players": "1-8",
+      "length": "about 1-2 hours",
+      "icon": "icon.jpg",
+      "pictures": [
+        "picture1.jpg",
+        "picture2.jpg",
+        "picture3.jpg"
+      ],
+      "plan": "The Castaway's Trail.plan",
+      "remix": true,
+      "featured": true,
+      "minModVersion": "3.0",
+      "created": "2026-09-28",
+      "islands": 3,
+      "size": 951671,
+      "updated": "2026-09-28",
+      "files": [
+        {
+          "name": "Castaway Camp.island",
+          "size": 106215,
+          "sha256": "5d0c3160d7881c32af7c1e0f88b866fc54bab60abe7814b772e2bda474b85ece"
+        },
+        {
+          "name": "icon.jpg",
+          "size": 12874,
+          "sha256": "fcc797173bbdc2340a9ca6f0654dc2696d70a63b7b01f0034ccd29f1bcc5a47a"
+        },
+        {
+          "name": "picture1.jpg",
+          "size": 120309,
+          "sha256": "41c61aa3feea74ee7d83877568f53760e900473eb1d0b3c8b1fa0c033df5e33b"
+        },
+        {
+          "name": "picture2.jpg",
+          "size": 124456,
+          "sha256": "710cab1e79d9320ce1f747900dc9195d0dca4d56bd5412e742a98458821f0be4"
+        },
+        {
+          "name": "picture3.jpg",
+          "size": 165218,
+          "sha256": "b37f897a0dee22f208cfd5201848924b7fa8d6b3422e0dd38b4110ad84d5b675"
+        },
+        {
+          "name": "Smuggler's Cove.island",
+          "size": 290423,
+          "sha256": "2e30cb5a3b19884355dd580f46cfb9bc19fc68ec90a7494c87310a3c1bfbaf78"
+        },
+        {
+          "name": "The Castaway's Trail.plan",
+          "size": 2355,
+          "sha256": "c5907a9b48a37a28a4b6598636ef4f5b49abc2cb8452486120087429915943e6"
+        },
+        {
+          "name": "Warden's Rock.island",
+          "size": 129821,
+          "sha256": "39318a8456afc03dc9f0806c84e23ccbcd002ae2e790557173bdd63d6df49c37"
         }
       ]
     }
