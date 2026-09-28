@@ -1,0 +1,19 @@
+{
+  "kind": "plan",
+  "title": "First Voyage",
+  "author": "SwedenJohansson",
+  "version": 1,
+  "summary": "A short trip: an old camp, a treasure island its quest points to, and a wreck drifting by.",
+  "description": "Palm Cove appears ahead as soon as the world starts. Finish the camp's quest and Treasure Cove appears 600 m to the north: find the map, find the X, open the chest. Reach it and a wreck drifts in from the east.\nRandom islands are off, so these are the only custom islands in the world.",
+  "tags": ["adventure", "quest", "short", "multiplayer"],
+  "players": "1-8",
+  "length": "about 1 hour",
+  "icon": "icon.jpg",
+  "pictures": ["picture1.jpg", "picture2.jpg"],
+  "plan": "First Voyage.plan",
+  "settings": { "monsters": "normal", "buildCost": 0, "levels": false },
+  "remix": true,
+  "featured": true,
+  "minModVersion": "3.0",
+  "created": "2026-09-28"
+}

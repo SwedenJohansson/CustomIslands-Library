@@ -1,0 +1,5 @@
+# Files the game downloads are stored byte for byte, so their SHA-256 in index.json matches
+*.island binary
+*.plan -text
+*.jpg binary
+*.png binary

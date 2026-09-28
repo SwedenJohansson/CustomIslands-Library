@@ -1,0 +1,120 @@
+{
+    "format":  1,
+    "library":  "Custom Islands library",
+    "download":  "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/main/",
+    "entries":  [
+                    {
+                        "id":  "first-voyage",
+                        "path":  "plans/first-voyage",
+                        "kind":  "plan",
+                        "title":  "First Voyage",
+                        "author":  "SwedenJohansson",
+                        "version":  1,
+                        "summary":  "A short trip: an old camp, a treasure island its quest points to, and a wreck drifting by.",
+                        "description":  "Palm Cove appears ahead as soon as the world starts. Finish the camp\u0027s quest and Treasure Cove appears 600 m to the north: find the map, find the X, open the chest. Reach it and a wreck drifts in from the east.\nRandom islands are off, so these are the only custom islands in the world.",
+                        "tags":  [
+                                     "adventure",
+                                     "quest",
+                                     "short",
+                                     "multiplayer"
+                                 ],
+                        "players":  "1-8",
+                        "length":  "about 1 hour",
+                        "icon":  "icon.jpg",
+                        "pictures":  [
+                                         "picture1.jpg",
+                                         "picture2.jpg"
+                                     ],
+                        "plan":  "First Voyage.plan",
+                        "settings":  {
+                                         "monsters":  "normal",
+                                         "buildCost":  0,
+                                         "levels":  false
+                                     },
+                        "remix":  true,
+                        "featured":  true,
+                        "minModVersion":  "3.0",
+                        "created":  "2026-09-28",
+                        "islands":  2,
+                        "size":  729932,
+                        "updated":  "2026-09-28",
+                        "files":  [
+                                      {
+                                          "name":  "First Voyage.plan",
+                                          "size":  1404,
+                                          "sha256":  "942785e500e67b9eab9b9ee95622fec2c03299e65d8c0200ae0c1d40d4732ff1"
+                                      },
+                                      {
+                                          "name":  "icon.jpg",
+                                          "size":  10767,
+                                          "sha256":  "7a37b98b9b7e12b297e1f80b7600c7fd786c1fbae47c819585e0e9386eb02329"
+                                      },
+                                      {
+                                          "name":  "Palm Cove.island",
+                                          "size":  117717,
+                                          "sha256":  "72b7381f7cad08573219d40528ccbdba39baf2f26b0abf5bb6986fa716642d9d"
+                                      },
+                                      {
+                                          "name":  "picture1.jpg",
+                                          "size":  249148,
+                                          "sha256":  "2cef99dd178b540ec25d4023a94131bc00a5b2d2521e9159d26d802b11663efe"
+                                      },
+                                      {
+                                          "name":  "picture2.jpg",
+                                          "size":  73716,
+                                          "sha256":  "2462a4e631daa0324e8fd2aa1bd4e6af5601c12fe459022a5ead76732c2246c5"
+                                      },
+                                      {
+                                          "name":  "Treasure Cove.island",
+                                          "size":  277180,
+                                          "sha256":  "5a5bd70e3b3731763dde1b12197811b9d893a328fe69923caa2a5a5f812e9075"
+                                      }
+                                  ]
+                    },
+                    {
+                        "id":  "palm-cove",
+                        "path":  "islands/palm-cove",
+                        "kind":  "island",
+                        "title":  "Palm Cove",
+                        "author":  "SwedenJohansson",
+                        "version":  1,
+                        "summary":  "A small island with an abandoned camp and a short quest.",
+                        "description":  "Someone camped here not long ago. Read the notice board and search the camp\u0027s supplies to find out what happened.\nA hill with a birch and pine forest, a wide beach all around, and loot in the camp.",
+                        "tags":  [
+                                     "quest",
+                                     "small",
+                                     "forest"
+                                 ],
+                        "players":  "1-8",
+                        "length":  "about 15 minutes",
+                        "icon":  "icon.jpg",
+                        "pictures":  [
+                                         "picture1.jpg"
+                                     ],
+                        "remix":  true,
+                        "featured":  true,
+                        "minModVersion":  "3.0",
+                        "created":  "2026-09-28",
+                        "islands":  1,
+                        "size":  393999,
+                        "updated":  "2026-09-28",
+                        "files":  [
+                                      {
+                                          "name":  "icon.jpg",
+                                          "size":  27134,
+                                          "sha256":  "a356949a736a749c2e56f03a3028d4180b18cc39c00fd381107eb7c7419a99f7"
+                                      },
+                                      {
+                                          "name":  "Palm Cove.island",
+                                          "size":  117717,
+                                          "sha256":  "72b7381f7cad08573219d40528ccbdba39baf2f26b0abf5bb6986fa716642d9d"
+                                      },
+                                      {
+                                          "name":  "picture1.jpg",
+                                          "size":  249148,
+                                          "sha256":  "2cef99dd178b540ec25d4023a94131bc00a5b2d2521e9159d26d802b11663efe"
+                                      }
+                                  ]
+                    }
+                ]
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "island",
+  "title": "Palm Cove",
+  "author": "SwedenJohansson",
+  "version": 1,
+  "summary": "A small island with an abandoned camp and a short quest.",
+  "description": "Someone camped here not long ago. Read the notice board and search the camp's supplies to find out what happened.\nA hill with a birch and pine forest, a wide beach all around, and loot in the camp.",
+  "tags": ["quest", "small", "forest"],
+  "players": "1-8",
+  "length": "about 15 minutes",
+  "icon": "icon.jpg",
+  "pictures": ["picture1.jpg"],
+  "remix": true,
+  "featured": true,
+  "minModVersion": "3.0",
+  "created": "2026-09-28"
+}

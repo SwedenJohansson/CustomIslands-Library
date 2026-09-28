@@ -1,0 +1,19 @@
+# Custom Islands world plan: which islands a world gets, when and where.
+# Choose it when creating a world (Raft's New Game box), or in a world with: WorldPlan <name>
+#
+# description = shown when choosing the plan
+# random = on|off   (islands from spawnpool.txt also appear by chance while sailing)
+# rule = id | what | when | where | message | receiver label
+#   what:  island:<saved island>   type:<map type>   pool   oneof:<island>, <island>, ...
+#   when:  start   km:<km sailed>   day:<day>   quest:<ref>   step:<ref>:<steps done>
+#          zone:<ref>:<zone name>   visit:<ref>   rule:<rule id>
+#   where: ahead:<metres>   near:<ref>:<metres>:<direction>   (any, north, north-east, east, ... or degrees)
+#   <ref> is an island in the world: the id of the rule that brought it, or its island name.
+#   The message is shown to every player when the island appears; the label is its name on the Receiver.
+
+description = A short trip: an old camp, a treasure island its quest points to, and a wreck drifting by.
+random = off
+
+rule = camp | island:Palm Cove | start | ahead:300 | A thin line of smoke rises from an island ahead. | Palm Cove
+rule = treasure | island:Treasure Cove | quest:camp | near:camp:600:north | The camp's notes speak of treasure to the north. | Treasure Cove
+rule = wreck | type:wreck | visit:treasure | near:treasure:400:east | Something drifts on the waves to the east. | Wreck
