@@ -1,0 +1,18 @@
+{
+  "id": "skyreach",
+  "kind": "island",
+  "title": "Skyreach",
+  "author": "SwedenJohansson",
+  "version": 1,
+  "summary": "A small island floating high above the sea, with a cache for whoever climbs up to it.",
+  "description": "A sky island hangs far above the waves. Build up from your raft to reach it - the cache on top is worth the climb.\nTick 'Also turn up while sailing' when you download it to meet it by chance in your worlds.",
+  "tags": ["flying", "small", "challenge"],
+  "players": "1-8",
+  "length": "15 minutes",
+  "icon": "icon.jpg",
+  "pictures": ["picture1.jpg"],
+  "remix": true,
+  "featured": true,
+  "minModVersion": "3.0",
+  "created": "2026-09-28"
+}

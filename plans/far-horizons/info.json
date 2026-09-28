@@ -1,0 +1,19 @@
+{
+  "id": "far-horizons",
+  "kind": "plan",
+  "title": "Far Horizons",
+  "author": "SwedenJohansson",
+  "version": 1,
+  "summary": "Few islands, far apart: a volcano, a frozen peak, a rat marsh and a last haven, each kilometres from the next.",
+  "description": "Random islands are off: after 2 km a volcano glows on the horizon, after 6 km a frozen spire rises, after 10 km a misty marsh full of rats, and after 15 km a quiet atoll - the last haven. Between them there is only the sea, so plan your supplies.\nBest with Fierce monsters and a higher build cost (World settings).",
+  "tags": ["survival", "long", "sparse", "multiplayer"],
+  "players": "1-8",
+  "length": "several hours",
+  "icon": "icon.jpg",
+  "pictures": ["picture1.jpg", "picture2.jpg", "picture3.jpg"],
+  "plan": "Far Horizons.plan",
+  "remix": true,
+  "featured": true,
+  "minModVersion": "3.0",
+  "created": "2026-09-28"
+}

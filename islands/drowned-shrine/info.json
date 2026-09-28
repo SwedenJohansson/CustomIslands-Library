@@ -1,0 +1,18 @@
+{
+  "id": "drowned-shrine",
+  "kind": "island",
+  "title": "Drowned Shrine",
+  "author": "SwedenJohansson",
+  "version": 1,
+  "summary": "An island under the sea: corals, sunken barrels and a hoard for divers.",
+  "description": "The sea took this island long ago. Dive down among the corals and the sunken barrels - there is loot for those who can hold their breath.\nTick 'Also turn up while sailing' when you download it to meet it by chance in your worlds.",
+  "tags": ["underwater", "diving", "loot"],
+  "players": "1-8",
+  "length": "15-30 minutes",
+  "icon": "icon.jpg",
+  "pictures": ["picture1.jpg"],
+  "remix": true,
+  "featured": true,
+  "minModVersion": "3.0",
+  "created": "2026-09-28"
+}

@@ -3,18 +3,30 @@
 Islands and world plans for the Raft mod **[Custom Islands](https://github.com/SwedenJohansson/DynamicIslands)**, ready to
 download.
 
-> **Preview.** The in-game library window that downloads from here isn't built yet. This repository shows how the
-> library is laid out, with one island and one plan. Until the window exists, you can copy the files into
-> `<Raft>\Mods\DynamicIslands\` by hand (see [Using an entry without the game's library window](#using-an-entry-without-the-games-library-window)).
+**In the game:** click **ISLAND LIBRARY** in Raft's main menu (or **Get more...** next to the plan in the New Game box),
+pick a plan or an island, and click **Download**. When an entry here gets a newer version, the game offers **Update**.
 
 ## What's here
 
-| | Entry | |
-|---|---|---|
-| <img src="plans/first-voyage/icon.jpg" width="96"> | **[First Voyage](plans/first-voyage)** - world plan by SwedenJohansson<br>A short trip: an old camp, a treasure island its quest points to, and a wreck drifting by.<br>*2 islands, 1-8 players, about 1 hour* | [info](plans/first-voyage/info.json) |
-| <img src="islands/palm-cove/icon.jpg" width="96"> | **[Palm Cove](islands/palm-cove)** - island by SwedenJohansson<br>A small island with an abandoned camp and a short quest.<br>*1-8 players, about 15 minutes* | [info](islands/palm-cove/info.json) |
+**World plans** (an adventure: which islands come, when and where)
 
-<img src="plans/first-voyage/picture2.jpg" width="49%"> <img src="islands/palm-cove/picture1.jpg" width="49%">
+| | Entry |
+|---|---|
+| <img src="plans/castaways-trail/icon.jpg" width="96"> | **[The Castaway's Trail](plans/castaways-trail)** by SwedenJohansson<br>A short adventure: an empty camp, the smuggler's treasure its notes point to, and the rock a warden guards.<br>*3 islands, 1-8 players, about 1-2 hours* |
+| <img src="plans/far-horizons/icon.jpg" width="96"> | **[Far Horizons](plans/far-horizons)** by SwedenJohansson<br>Few islands, far apart: a volcano, a frozen peak, a rat marsh and a last haven, each kilometres from the next.<br>*4 islands, 1-8 players, several hours* |
+| <img src="plans/first-voyage/icon.jpg" width="96"> | **[First Voyage](plans/first-voyage)** by SwedenJohansson<br>A short trip: an old camp, a treasure island its quest points to, and a wreck drifting by.<br>*2 islands, 1-8 players, about 1 hour* |
+
+**Islands**
+
+| | Entry |
+|---|---|
+| <img src="islands/skyreach/icon.jpg" width="96"> | **[Skyreach](islands/skyreach)** by SwedenJohansson<br>A small island floating high above the sea, with a cache for whoever climbs up to it. |
+| <img src="islands/drowned-shrine/icon.jpg" width="96"> | **[Drowned Shrine](islands/drowned-shrine)** by SwedenJohansson<br>An island under the sea: corals, sunken barrels and a hoard for divers. |
+| <img src="islands/emerald-jungle/icon.jpg" width="96"> | **[Emerald Jungle](islands/emerald-jungle)** by SwedenJohansson<br>A large island made like Raft's big ones: dense jungle, cliffs and plenty to gather. |
+| <img src="islands/palm-cove/icon.jpg" width="96"> | **[Palm Cove](islands/palm-cove)** by SwedenJohansson<br>A small island with an abandoned camp and a short quest. |
+
+<img src="plans/castaways-trail/picture3.jpg" width="49%"> <img src="plans/far-horizons/picture2.jpg" width="49%">
+<img src="islands/skyreach/picture1.jpg" width="49%"> <img src="islands/emerald-jungle/picture1.jpg" width="49%">
 
 ## How it's laid out
 
@@ -107,7 +119,7 @@ Limits: icon 200 KB, each picture 500 KB, a whole entry 50 MB.
 It's looked at before it goes in. To send a new version later, export the same island or plan again (it keeps its id)
 and submit it the same way. Something in the library that shouldn't be? [Open an issue](../../issues/new).
 
-## Using an entry without the game's library window
+## Using an entry by hand (without the game's library window)
 
 Copy the `.island` files into `<Raft>\Mods\DynamicIslands\` and a `.plan` into `<Raft>\Mods\DynamicIslands\plans\`. The
 plan then shows up in Raft's New Game box. Careful: a file with the same name as one of yours replaces it. (The library
