@@ -100,4 +100,8 @@ window will never do that; it keeps both.)
 
 ## Licence
 
-Not chosen yet. Until it is, ask the author before re-sharing an entry.
+Everything in this library is shared under **[Creative Commons Attribution 4.0](LICENSE)** (CC BY 4.0): you may use,
+change and re-share an entry, as long as you credit its author. By submitting an entry you confirm you made it and agree
+to share it under this licence. An entry whose `remix` is `false` asks you not to share changed versions of it.
+
+Something here that shouldn't be? Open an issue and it will be looked at.
