@@ -1,6 +1,10 @@
 # build-index.ps1 - checks every entry in islands\ and plans\ and writes index.json (the list the game reads).
 # Run from anywhere: powershell -File tools\build-index.ps1   (Windows PowerShell 5.1 or PowerShell 7)
 # An entry with a problem is left out of index.json and named in the output; the script then exits with code 1.
+# -commit <sha>: the commit the entries' files are in (the GitHub workflow passes it). The game downloads every file
+#   from that commit's fixed address, so the list and its files always match, even while GitHub's cache is catching up.
+# -check: only check the entries, write nothing (for a pull request).
+param([string]$commit = "", [switch]$check)
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 $maxIcon = 200KB; $maxPicture = 500KB; $maxEntry = 50MB
@@ -51,6 +55,10 @@ foreach ($kind in @("island", "plan")) {
             foreach ($n in $names | Sort-Object -Unique) { if (-not (Test-Path (Join-Path $dir.FullName ($n + ".island")))) { $bad += "the plan names island '$n' but '$n.island' is not in the folder" } }
         }
 
+        # (names the game can download and store: no # % ? - they break a web address - and nothing Windows refuses)
+        foreach ($f in Get-ChildItem $dir.FullName -File) {
+            if ($f.Name -match '[#%?:*"<>|\\/]' -or $f.Name.StartsWith('.') -or $f.Name -match '^(CON|PRN|AUX|NUL|COM\d|LPT\d)\.') { $bad += "the file name '$($f.Name)' can't be downloaded by the game (no # % ? : * `" < > |)" }
+        }
         $files = @(); $size = 0
         foreach ($f in Get-ChildItem $dir.FullName -File | Where-Object { $_.Name -ne "info.json" } | Sort-Object Name) {
             $files += [ordered]@{ name = $f.Name; size = $f.Length; sha256 = (Sha256 $f.FullName) }; $size += $f.Length
@@ -69,10 +77,15 @@ $sorted = @($entries | Sort-Object @{ Expression = { [bool]$_.featured }; Descen
 $index = [ordered]@{
     format = 1
     library = "Custom Islands library"
-    download = "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/main/"
+    # (files: <download><path>/<name>; with a commit, from that commit - never changes; without, from main)
+    download = "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/" + $(if ($commit) { $commit } else { "main" }) + "/"
+    commit = $commit
     entries = $sorted
 }
-$json = $index | ConvertTo-Json -Depth 8
-[IO.File]::WriteAllText((Join-Path $root "index.json"), $json + "`n", (New-Object Text.UTF8Encoding $false))
-"index.json: $($sorted.Count) entr$(if ($sorted.Count -eq 1) { 'y' } else { 'ies' })"
+if ($check) { "Checked: $($sorted.Count) good entr$(if ($sorted.Count -eq 1) { 'y' } else { 'ies' })" }
+else {
+    $json = $index | ConvertTo-Json -Depth 8
+    [IO.File]::WriteAllText((Join-Path $root "index.json"), $json + "`n", (New-Object Text.UTF8Encoding $false))
+    "index.json: $($sorted.Count) entr$(if ($sorted.Count -eq 1) { 'y' } else { 'ies' })" + $(if ($commit) { " (files from commit $commit)" } else { "" })
+}
 if ($problems.Count) { "Left out:"; $problems | ForEach-Object { "  $_" }; exit 1 }

@@ -1,0 +1,54 @@
+name: Submit an island or plan
+description: Send in a pack (.zip) you exported in Custom Islands, for the island library.
+title: "[Submit] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing! In Raft's island editor, pick your island (Islands window) or your plan (World plans) and click
+        **Export...**, then **Share...** - that opens this page and the folder with your pack. Drag the `.zip` into the box
+        below. Everything is looked at before it goes into the library.
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: The name shown in the library.
+      placeholder: e.g. First Voyage
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it?
+      options:
+        - An island
+        - A world plan (with its islands)
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: Your name as it should be shown in the library.
+    validations:
+      required: true
+  - type: textarea
+    id: pack
+    attributes:
+      label: The pack (.zip)
+      description: Drag the .zip from Raft\Mods\DynamicIslands\exports here (a new version of something already in the library too - it keeps its id).
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: What you'd like people to know, or what changed in a new version.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Sharing
+      options:
+        - label: I made this (or it's a remix whose original allows it, credited in the pack), and I agree to share it under Creative Commons Attribution 4.0 (CC BY 4.0).
+          required: true

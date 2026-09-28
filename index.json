@@ -2,6 +2,7 @@
     "format":  1,
     "library":  "Custom Islands library",
     "download":  "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/main/",
+    "commit":  "",
     "entries":  [
                     {
                         "id":  "first-voyage",

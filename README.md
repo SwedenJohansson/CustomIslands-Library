@@ -29,7 +29,8 @@ plans/<id>/                 one folder per world plan
     info.json, icon.jpg, picture1.jpg ...
     <Name>.plan             the plan
     <Island>.island ...     every island the plan needs
-tools/build-index.ps1       checks every entry and writes index.json
+tools/build-index.ps1       checks every entry and writes index.json (the Build the list workflow runs it)
+.github/                    the workflow, and the "Submit an island or plan" form
 ```
 
 The folder name is the entry's **id**: lower case letters, digits and `-` (e.g. `palm-cove`). It never changes, so the
@@ -67,32 +68,44 @@ game can tell when an entry it downloaded has a newer version.
 | `plan` | plans only: the plan file in the folder |
 | `remix` | whether others may change and re-share it (credit stays with the author) |
 | `featured` | shown first, with a badge |
+| `minModVersion` | the Custom Islands version it was made with (an older mod warns before installing it) |
+| `basedOn` | for a remix: what it's based on and by whom |
 
 An entry has no game settings: difficulty, build cost, the level up system and the rest are chosen by the player in
 Raft's New Game box (World settings), whatever plan they pick. Mention in the description what you had in mind, e.g.
 "best with Fierce monsters".
-| `minModVersion` | the oldest Custom Islands version it works with |
 
 `index.json` has all of that for every entry, plus what the build adds: `id`, `path`, `islands` (how many), `size`,
-`updated`, and every file with its size and SHA-256 (the game checks each download against it).
+`updated`, and every file with its size and SHA-256 (the game checks each download against it). `download` and `commit`
+say where the files are: the commit the list was built from, so the list and the files always match.
 
 ## Adding an entry (maintainer)
 
-1. Unzip what the creator sent. It's already laid out as above (info.json, icon, pictures, files).
+1. A submission arrives as an issue ("[Submit] ..."). Download its `.zip` and unzip it: it's one folder, already laid out
+   as above (info.json, icon, pictures, files), named after the entry's id. Look at it - the pictures, the description,
+   and the islands in the game if you like (Import... in the island editor installs the .zip without overwriting yours).
 2. On GitHub, open `islands/` or `plans/`, choose **Add file -> Upload files**, drag the whole folder in, and commit.
-3. Rebuild the list: `powershell -File tools\build-index.ps1` in a clone, then commit `index.json`. (Planned: a GitHub
-   workflow does this automatically on every change.) An entry with a problem - a missing picture, a plan naming an island
-   that isn't in its folder, a file too big - is left out and named.
+3. That's all: the **Build the list** workflow (Actions tab) checks the entry and writes `index.json` within a minute or
+   two. An entry with a problem - a missing picture, a plan naming an island that isn't in its folder, a file too big, a
+   file name the game can't download - is left out, named in the run's log, and the run shows a red cross.
+4. Close the issue with a thank-you.
 
-**Update an entry:** replace its files, raise `version` in info.json, rebuild. **Remove one:** delete its folder,
-rebuild. Players keep what they already downloaded.
+**Update an entry:** a new export of the same island or plan keeps its id and has a higher `version`: replace the folder's
+files with the new ones and commit. Players see **Update** in the game. **Remove one:** delete its folder and commit.
+Players keep what they already downloaded. **Build the list by hand:** Actions tab -> Build the list -> Run workflow, or
+`powershell -File tools\build-index.ps1` in a clone (`-check` only checks).
 
 Limits: icon 200 KB, each picture 500 KB, a whole entry 50 MB.
 
 ## Submitting an island or plan (players)
 
-*Planned:* the mod's **Export** button makes a .zip laid out like the folders here, and **Share** opens a "Submit" form in
-this repository to attach it to. Until then, open an issue and attach your files.
+1. In Raft's island editor, pick your island (Islands window) or open your plan (World plans) and click **Export...**.
+2. Fill in the title, a summary and a description, take a picture, **Export**.
+3. Click **Share...**: it opens the **[Submit an island or plan](../../issues/new?template=submit.yml)** form here and
+   the folder with your pack. Sign in to GitHub, drag the `.zip` into the form, tick the box, submit.
+
+It's looked at before it goes in. To send a new version later, export the same island or plan again (it keeps its id)
+and submit it the same way. Something in the library that shouldn't be? [Open an issue](../../issues/new).
 
 ## Using an entry without the game's library window
 

@@ -1,0 +1,47 @@
+# Checks every entry and writes index.json (the list the game reads) whenever islands or plans change on main.
+# An entry with a problem is left out of the list and named in the run's log, and the run is marked failed so you see it.
+# A pull request is only checked. "Run workflow" (Actions tab) builds the list again by hand.
+name: Build the list (index.json)
+on:
+  push:
+    branches: [main]
+    paths: ['islands/**', 'plans/**', 'tools/build-index.ps1', '.github/workflows/build-index.yml']
+  pull_request:
+    paths: ['islands/**', 'plans/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build-index
+  cancel-in-progress: false
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check the entries (pull request)
+        if: github.event_name == 'pull_request'
+        shell: pwsh
+        run: ./tools/build-index.ps1 -check
+      - name: Check the entries and write index.json
+        id: build
+        if: github.event_name != 'pull_request'
+        shell: pwsh
+        run: |
+          ./tools/build-index.ps1 -commit $env:GITHUB_SHA
+          "problems=$LASTEXITCODE" >> $env:GITHUB_OUTPUT
+          exit 0
+      - name: Commit index.json
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          if git diff --cached --quiet; then echo "index.json unchanged"; else git commit -m "index.json for ${GITHUB_SHA::7}" && git push; fi
+      - name: Entries left out
+        if: github.event_name != 'pull_request' && steps.build.outputs.problems != '0'
+        run: |
+          echo "Some entries were left out of index.json - see 'Check the entries and write index.json' above."
+          exit 1
