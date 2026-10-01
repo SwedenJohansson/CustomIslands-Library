@@ -4,9 +4,11 @@
 # -commit <sha>: the commit the entries' files are in (the GitHub workflow passes it). The game downloads every file
 #   from that commit's fixed address, so the list and its files always match, even while GitHub's cache is catching up.
 # -check: only check the entries, write nothing (for a pull request).
-param([string]$commit = "", [switch]$check)
+# -root <folder>: a library folder elsewhere (e.g. the Desktop's TO_FRANZ, copied into the Google Drive folder as it is).
+# -drive: for the library in a Google Drive folder: no download address (the game finds each file by its path there).
+param([string]$commit = "", [switch]$check, [string]$root = "", [switch]$drive)
 $ErrorActionPreference = "Stop"
-$root = Split-Path -Parent $PSScriptRoot
+if (-not $root) { $root = Split-Path -Parent $PSScriptRoot }
 $maxIcon = 200KB; $maxPicture = 500KB; $maxEntry = 50MB
 $entries = @(); $problems = @()
 
@@ -78,7 +80,7 @@ $index = [ordered]@{
     format = 1
     library = "Custom Islands library"
     # (files: <download><path>/<name>; with a commit, from that commit - never changes; without, from main)
-    download = "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/" + $(if ($commit) { $commit } else { "main" }) + "/"
+    download = $(if ($drive) { "" } else { "https://raw.githubusercontent.com/SwedenJohansson/CustomIslands-Library/" + $(if ($commit) { $commit } else { "main" }) + "/" })
     commit = $commit
     entries = $sorted
 }
